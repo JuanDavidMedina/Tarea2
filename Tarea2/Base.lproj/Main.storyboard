@@ -187,25 +187,16 @@
                                 <rect key="frame" x="70" y="274" width="274" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="NewUsername:" destination="tbD-aQ-MUL" eventType="editingDidEnd" id="ou5-PT-but"/>
-                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bNe-zX-ehp">
                                 <rect key="frame" x="70" y="383" width="274" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="NewPassword:" destination="tbD-aQ-MUL" eventType="editingDidEnd" id="fG4-wD-QTe"/>
-                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Confirm Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5wB-vO-nwE">
                                 <rect key="frame" x="70" y="492" width="274" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="ConfirmPassword:" destination="tbD-aQ-MUL" eventType="editingDidEnd" id="spv-dH-CJK"/>
-                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="no1-cm-7Eg">
                                 <rect key="frame" x="145" y="701" width="125" height="31"/>
@@ -243,6 +234,10 @@
                             <constraint firstItem="5wB-vO-nwE" firstAttribute="top" secondItem="bNe-zX-ehp" secondAttribute="bottom" constant="75" id="yQM-9o-VTg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ConfirmPassword" destination="5wB-vO-nwE" id="dIL-9b-tHb"/>
+                        <outlet property="NewPassword" destination="bNe-zX-ehp" id="8tQ-EB-4h4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zrb-sw-QzO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

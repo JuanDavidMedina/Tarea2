@@ -20,30 +20,18 @@ class RegisterViewController: UIViewController {
     var newConfirm: String = ""
     
     
-    @IBAction func NewUsername(_ sender: UITextField) {
-        newUsername = sender.text!
-        print(newUsername)
-    }
+    @IBOutlet weak var NewPassword: UITextField!
+    
+    @IBOutlet weak var ConfirmPassword: UITextField!
     
     
-    @IBAction func NewPassword(_ sender: UITextField) {
-        newPassword = sender.text!
-        print(newPassword)
-    }
-    
-    @IBAction func ConfirmPassword(_ sender: UITextField) {
-        newConfirm = sender.text!
-        print(newConfirm)
-    }
-    
-    
-    func CreateUser(){
+  func CreateUser(){
         
     
-        let parameters: [String: Any] = ["user": newUsername, "pass": newPassword]
+    let parameters: [String: Any] = ["user": newUsername, "pass": newPassword]
       
       // create the url with URL
-      let url = URL(string: "https://superapi.netlify.app/api/register")! // change server url accordingly
+    let url = URL(string: "https://superapi.netlify.app/api/register")! // change server url accordingly
       
       // create the session object
       let session = URLSession.shared
@@ -108,8 +96,8 @@ class RegisterViewController: UIViewController {
     @IBAction func NewAccount(_ sender: UIButton) {
         
         
-        if newPassword == newConfirm{
-            self.performSegue(withIdentifier: "JugarDeNuevoLose", sender: sender)
+        if NewPassword.text == ConfirmPassword.text{
+            self.performSegue(withIdentifier: "UserCreation", sender: sender)
             
         }
         
