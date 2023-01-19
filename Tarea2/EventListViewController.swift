@@ -49,7 +49,8 @@ class EventListViewController: UIViewController, UITableViewDelegate, UITableVie
                 
         
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            DispatchQueue.main.async {
+             
                 self.TableView.reloadData()
             }
         
