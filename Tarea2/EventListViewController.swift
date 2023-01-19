@@ -45,12 +45,9 @@ class EventListViewController: UIViewController, UITableViewDelegate, UITableVie
                 self.ArrayEvents.append(evento)
                 print(String(describing: Events))
                 
-                
-                
-        
             }
-            DispatchQueue.main.async {
-             
+           
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 self.TableView.reloadData()
             }
         
