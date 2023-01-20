@@ -60,7 +60,6 @@ class RegisterViewController: UIViewController {
         do {
           if let jsonResponse = try JSONSerialization.jsonObject(with: responseData, options: .mutableContainers) as? [String: Any] {
             print(jsonResponse)
-            // handle json response
           } else {
             print("data maybe corrupted or in wrong format")
             throw URLError(.badServerResponse)

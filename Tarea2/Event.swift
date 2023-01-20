@@ -4,12 +4,12 @@ import Foundation
 
 class Event : Decodable{
     var name: String
-    var date: Int
+    var date: Double
     
     
     init(json: [String: Any]) {
     name = json["name"] as? String ?? ""
-    date = json["date"] as? Int ?? 0
+    date = json["date"] as? Double ?? 0
         
     }
 }
