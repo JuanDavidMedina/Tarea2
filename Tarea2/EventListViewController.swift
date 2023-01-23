@@ -22,10 +22,6 @@ class EventListViewController: UIViewController, UITableViewDelegate, UITableVie
         
     }
     var ArrayEvents: [Event] = []
-   
-    
-    
-    
 
     func ShowOriginalList(){
   
@@ -87,6 +83,9 @@ class EventListViewController: UIViewController, UITableViewDelegate, UITableVie
     
     
 
+    @IBAction func Reload(_ sender: UIButton) {
+        ShowOriginalList()
+    }
     
       
 }

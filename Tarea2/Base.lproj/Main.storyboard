@@ -71,6 +71,25 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="VfD-Vb-sPM"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpN-nq-7Dz">
+                                <rect key="frame" x="135" y="74" width="144" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bl-mz-PXw">
+                                <rect key="frame" x="316" y="59" width="69" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Reload">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" systemColor="systemBlueColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="Reload:" destination="jOh-G9-TAC" eventType="touchUpInside" id="Syn-GW-vdu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IEV-p6-Txy"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -80,9 +99,13 @@
                             <constraint firstItem="80r-wB-SN1" firstAttribute="top" secondItem="IEV-p6-Txy" secondAttribute="top" constant="20" id="Ihf-Bn-9li"/>
                             <constraint firstItem="efT-7y-8dE" firstAttribute="top" secondItem="PKS-hg-g7t" secondAttribute="bottom" constant="40" id="NTG-ph-wRQ"/>
                             <constraint firstItem="PKS-hg-g7t" firstAttribute="top" secondItem="IEV-p6-Txy" secondAttribute="top" constant="100" id="NfO-Gt-yIL"/>
+                            <constraint firstItem="zpN-nq-7Dz" firstAttribute="top" secondItem="IEV-p6-Txy" secondAttribute="top" constant="30" id="Qc8-fZ-ySO"/>
+                            <constraint firstItem="IEV-p6-Txy" firstAttribute="trailing" secondItem="5bl-mz-PXw" secondAttribute="trailing" constant="29" id="XwH-Ca-UD0"/>
                             <constraint firstItem="PKS-hg-g7t" firstAttribute="leading" secondItem="IEV-p6-Txy" secondAttribute="leading" constant="20" id="YcO-PY-0qC"/>
                             <constraint firstItem="PKS-hg-g7t" firstAttribute="centerX" secondItem="I4I-6h-izR" secondAttribute="centerX" id="YrG-vQ-hXa"/>
+                            <constraint firstItem="5bl-mz-PXw" firstAttribute="top" secondItem="IEV-p6-Txy" secondAttribute="top" constant="15" id="gKa-0x-fLO"/>
                             <constraint firstItem="IEV-p6-Txy" firstAttribute="trailing" secondItem="efT-7y-8dE" secondAttribute="trailing" constant="150" id="lb3-vQ-4CX"/>
+                            <constraint firstItem="zpN-nq-7Dz" firstAttribute="centerX" secondItem="I4I-6h-izR" secondAttribute="centerX" id="mre-1p-j8Z"/>
                             <constraint firstItem="80r-wB-SN1" firstAttribute="leading" secondItem="IEV-p6-Txy" secondAttribute="leading" constant="15" id="uEA-sA-g4C"/>
                             <constraint firstItem="IEV-p6-Txy" firstAttribute="trailing" secondItem="PKS-hg-g7t" secondAttribute="trailing" constant="20" id="w9v-v5-a50"/>
                         </constraints>
@@ -109,13 +132,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="azh-LF-460">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New event name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="azh-LF-460">
                                 <rect key="frame" x="70" y="274" width="274" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQD-ns-ytE">
-                                <rect key="frame" x="150" y="717" width="114" height="31"/>
+                                <rect key="frame" x="130" y="717" width="154" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Create event">
                                     <backgroundConfiguration key="background">
@@ -148,8 +171,8 @@
                             <constraint firstItem="SG4-uL-cXw" firstAttribute="leading" secondItem="PbF-9D-Hkx" secondAttribute="leading" id="F0L-Do-is6"/>
                             <constraint firstItem="PbF-9D-Hkx" firstAttribute="trailing" secondItem="ZuJ-22-HRQ" secondAttribute="trailing" constant="94.5" id="FRk-i5-wio"/>
                             <constraint firstItem="ZuJ-22-HRQ" firstAttribute="centerX" secondItem="CbO-NX-Yh3" secondAttribute="centerX" id="Vlo-Op-eY9"/>
-                            <constraint firstItem="PbF-9D-Hkx" firstAttribute="trailing" secondItem="EQD-ns-ytE" secondAttribute="trailing" constant="150" id="cVs-1t-ZuD"/>
-                            <constraint firstItem="EQD-ns-ytE" firstAttribute="leading" secondItem="PbF-9D-Hkx" secondAttribute="leading" constant="150" id="fl9-eo-X5U"/>
+                            <constraint firstItem="PbF-9D-Hkx" firstAttribute="trailing" secondItem="EQD-ns-ytE" secondAttribute="trailing" constant="130" id="cVs-1t-ZuD"/>
+                            <constraint firstItem="EQD-ns-ytE" firstAttribute="leading" secondItem="PbF-9D-Hkx" secondAttribute="leading" constant="130" id="fl9-eo-X5U"/>
                             <constraint firstItem="EQD-ns-ytE" firstAttribute="top" secondItem="SG4-uL-cXw" secondAttribute="bottom" constant="133" id="mgh-hA-vuj"/>
                             <constraint firstItem="azh-LF-460" firstAttribute="top" secondItem="ZuJ-22-HRQ" secondAttribute="bottom" constant="75" id="oh2-EU-Ayv"/>
                             <constraint firstItem="azh-LF-460" firstAttribute="leading" secondItem="PbF-9D-Hkx" secondAttribute="leading" constant="70" id="rOB-jn-h0u"/>
@@ -183,7 +206,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="134-9h-Rjq">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="134-9h-Rjq">
                                 <rect key="frame" x="70" y="274" width="274" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -285,7 +308,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GI3-Ot-nBl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GI3-Ot-nBl">
                                 <rect key="frame" x="90" y="139" width="234" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
