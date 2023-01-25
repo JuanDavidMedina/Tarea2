@@ -12,7 +12,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
     }
 
     @IBOutlet weak var Username: UITextField!
@@ -21,7 +20,6 @@ class ViewController: UIViewController {
     
     var ArrayUsers: [String] = []
 
-    
     @IBAction func Login(_ sender: UIButton) {
         let url = URL(string: "https://superapi.netlify.app/api/login")!
         let parameters: [String: Any] = ["user": Username.text, "pass": Password.text]
@@ -44,14 +42,9 @@ class ViewController: UIViewController {
             }else{
                 print("Usuario o contraseña incorrectos")
             }
-            
         }
         task.resume()
-        
-        
     }
-
-
 }
    
 

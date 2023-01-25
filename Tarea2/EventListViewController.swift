@@ -84,6 +84,7 @@ class EventListViewController: UIViewController, UITableViewDelegate, UITableVie
     
 
     @IBAction func Reload(_ sender: UIButton) {
+        ArrayEvents = []
         ShowOriginalList()
     }
     
